@@ -1,3 +1,3 @@
 #!/bin/sh
 
-git add . && git commit -m 'Improve' && git push -u
+git add . && git commit -m 'Improve' && git push
