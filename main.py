@@ -1,10 +1,11 @@
 import discord
 import survivor
+import os
 from discord.ext import commands
 
 client = discord.Client()
 
-token = "NDI2NjQ1NTc5MjI2MTUyOTYz.DZZFXw.wZy8tg0gF_5zGFPiMBL9juJJuSA"
+TOKEN = os.environ["TOKEN"]
 
 @client.event
 async def on_ready():
@@ -67,4 +68,4 @@ async def on_message(message):
         perks = "固有パーク:\n" + data["perks"][0] + ", " + data["perks"][1] + ", " + data["perks"][2]
         await client.send_message(message.channel, name + perks)
 
-client.run(token)
+client.run(TOKEN)
